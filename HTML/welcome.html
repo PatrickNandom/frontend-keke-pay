@@ -47,7 +47,7 @@
                         </p>
                         <!-- ==================== BUTTON ================ -->
                         <!-- <buttons >Continue</button> -->
-                        <a href="Confirmation.html"><button class="btn">Continue</button></a>
+                        <a href="Confirmation.html"><button class="buttonx">Continue</button></a>
                         <div class="login">
                             <p>Already have an account?<a href="Login.html"><span>Log in</span></a></p>
                         </div>
@@ -59,7 +59,8 @@
     <script>
         const form = document.querySelector('form');
         const emailError = document.querySelector('.email.error');
-        const btn = document.querySelector('.btn');
+        const btn = document.querySelector('.buttonx');
+        console.log(btn);
 
         //adding event listener to the button
         btn.addEventListener('click', async (e) => {
@@ -81,11 +82,12 @@
                 });
 
                 const data = await res.json();
-                console.log(data.message);
+                console.log(`${data.message}`);
 
                 if (res.ok) {
-                    location.assign('Confirmation.html');
+                    alert(`${data.message}`)
                     localStorage.setItem('userId', data.userId);
+                    location.assign('Confirmation.html');
                 }
 
             } catch (error) {

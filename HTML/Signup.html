@@ -68,33 +68,37 @@
     </main>
 
     <script>
-        const fullName = document.getElementById('full-name').value;
-        const regNum = document.getElementById('reg-no').value;
-        const password = document.querySelector('.pwrd-1').value;
-        const confirmPassword = document.querySelector('.pwrd-2').value;
 
-        console.log(fullName);
-        console.log(regNum);
-        console.log(password);
-        console.log(confirmPassword);
         const btn = document.getElementById('btn');
-        const userId = localStorage.getItem('userId');
 
         btn.addEventListener('click', async (e) => {
             e.preventDefault();
-            //input validation
-            if (fullName === '' || regNum === '' || password === '' || confirmPassword === '') {
+
+            // Selecting input elements inside the event listener
+            const fullName = document.getElementById('full-name').value;
+            const registrationNumber = document.getElementById('reg-no').value;
+            const password = document.querySelector('.pwrd-1').value;
+            const confirmPassword = document.querySelector('.pwrd-2').value;
+
+            console.log(fullName);
+            console.log(registrationNumber);
+            console.log(password);
+            console.log(confirmPassword);
+
+            // Input validation
+            if (fullName === '' || registrationNumber === '' || password === '' || confirmPassword === '') {
                 alert('All inputs are required');
                 return;
             }
-            //url
-            const baseUrl = 'https://keke-pay.onrender.com'
 
+            // Replace this URL with your actual backend URL
+            const baseUrl = 'https://keke-pay.onrender.com';
             // const baseUrl = 'http://localhost:5500'
+            const userId = localStorage.getItem('userId');
+            console.log(userId);
+
 
             const registerUser = async () => {
-                //selecting elements using DOM
-
                 try {
                     const response = await fetch(`${baseUrl}/verification/register/${userId}`, {
                         method: 'POST',
@@ -103,7 +107,7 @@
                         },
                         body: JSON.stringify({
                             fullName,
-                            regNum,
+                            registrationNumber,
                             password,
                             confirmPassword
                         }),
@@ -112,15 +116,13 @@
                     const data = await response.json();
 
                     if (response.ok) {
-                        alert('Registration was successfull.');
+                        alert(`${data.message}`);
                         window.location.href = 'Dashboard.html';
-
                     } else {
-                        alert(`Registration fail: ${data.message}`);
+                        alert(`${data.message}`);
                     }
-
                 } catch (error) {
-                    console.error('Error updating user profile:', error);
+                    console.error('Error registering user:', error);
                 }
             };
 
