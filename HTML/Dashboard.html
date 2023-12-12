@@ -161,17 +161,17 @@
 
         //DIS PLAY NAME FUNCTION//
         const fullName = localStorage.getItem('fullName');
-        const bal = localStorage.getItem('balance');
+        const balance = localStorage.getItem('balance');
         const count = localStorage.getItem('count')
 
         const name = document.querySelector('.display-name');
-        const balance = document.querySelector('.diplay-balance');
+        const bal = document.querySelector('.diplay-balance');
         const counts = document.querySelector('.count');
         // console.log(name);
         // console.log(balance);
         // console.log(counts);
         name.textContent = `Welcome ${fullName}`;
-        balance.textContent = bal;
+        bal.textContent = balance;
         counts.textContent = count;
         //END OF DISPLAY NAME FUCTION//
 

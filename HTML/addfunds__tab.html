@@ -105,6 +105,7 @@
                     if (response.ok) {
                         alert(`${data.message}`);
                         localStorage.setItem('balance', data.balance);
+                        localStorage.setItem('count', data.count)
                         window.location.href = 'Dashboard.html';
                     } else {
                         // alert(`${data.message}`);
