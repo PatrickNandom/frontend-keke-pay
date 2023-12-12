@@ -87,8 +87,8 @@
                         </div>
                         <div class="second__Card">
                             <div class="cont">
-                                <p>Total Transactions this month</p>
-                                <h2>0</h2>
+                                <p>Total Transactions </p>
+                                <h2 class="count">0</h2>
                             </div>
                         </div>
 
@@ -162,13 +162,17 @@
         //DIS PLAY NAME FUNCTION//
         const fullName = localStorage.getItem('fullName');
         const bal = localStorage.getItem('balance');
+        const count = localStorage.getItem('count')
 
         const name = document.querySelector('.display-name');
         const balance = document.querySelector('.diplay-balance');
+        const counts = document.querySelector('.count');
         // console.log(name);
         // console.log(balance);
+        // console.log(counts);
         name.textContent = `Welcome ${fullName}`;
         balance.textContent = bal;
+        counts.textContent = count;
         //END OF DISPLAY NAME FUCTION//
 
 
