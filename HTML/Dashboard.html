@@ -64,7 +64,7 @@
                 <div class="second__bar">
                     <div class="text">
                         <h6>Hey there,</h6>
-                        <h4>Welcome</h4>
+                        <h4 class="display-name">Welcome</h4>
                     </div>
                     <div class="auto__pay">
                         <h4>Auto pay</h4>
@@ -82,7 +82,7 @@
                             <p>Current Balance</p>
                             <div class="naira">
                                 <img src="../Images__Dashboard/naira.png" height="20px" width="40px">
-                                <h3>********</h3>
+                                <h3 class="diplay-balance">********</h3>
                             </div>
                         </div>
                         <div class="second__Card">
@@ -158,6 +158,18 @@
         // Call the function once to set the initial values
         updateClock();
         //END IF THE FUNCTION FOR DISPLAYING DATE//
+
+        //DIS PLAY NAME FUNCTION//
+        const fullName = localStorage.getItem('fullName');
+        const bal = localStorage.getItem('balance');
+
+        const name = document.querySelector('.display-name');
+        const balance = document.querySelector('.diplay-balance');
+        // console.log(name);
+        // console.log(balance);
+        name.textContent = `Welcome ${fullName}`;
+        balance.textContent = bal;
+        //END OF DISPLAY NAME FUCTION//
 
 
         const optionMenu = document.querySelector(".select-menu"),

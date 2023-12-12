@@ -70,12 +70,12 @@
         const data = await res.json();
 
         if (res.ok) {
-          alert(data.message);
+          alert(`${data.message}`);
           localStorage.setItem('userId', data.userId);
           location.assign('Signup.html');
 
         } else {
-          alert(data.message)
+          alert(`${data.message}`)
           console.error('Verification failed:', data.message);
         }
       } catch (error) {
