@@ -4,21 +4,21 @@
     box-sizing: border-box;
 }
 
-.container{
-  display: flex;
+.container {
+    display: flex;
 }
 
-.Main__container{
+.Main__container {
     border: 1px solid red;
     height: 622px;
     border-radius: 20px;
     border: 1px solid #D9D9D9;
     background: #FFF;
-   margin-top: 40px;
-   padding: 40px 30px;
+    margin-top: 40px;
+    padding: 40px 30px;
 }
 
-.container__aside{
+.container__aside {
     display: inline-flex;
     height: 865px;
     padding: 40px 0px;
@@ -31,7 +31,7 @@
     width: 330px;
 }
 
-.logo{
+.logo {
     display: flex;
     width: 181px;
     height: 41px;
@@ -39,19 +39,19 @@
     margin-top: -1.5rem;
 }
 
-li{
+li {
     list-style: none;
     padding: 0 35px;
 }
 
-.links__top{
+.links__top {
     margin-top: 20px;
 }
 
-.links__top li a{
+.links__top li a {
     display: block;
     text-decoration: none;
-    padding:13px 10px;
+    padding: 13px 10px;
     margin-top: 25px;
     border-radius: 15px;
     color: rgba(0, 0, 0, 0.50);
@@ -59,7 +59,7 @@ li{
     font-size: 18px;
 }
 
-.links__top li i{
+.links__top li i {
     padding-right: 10px;
 }
 
@@ -68,15 +68,15 @@ li{
     color: white;
     transition: 0.46s;
 }
-  
-  .links__top li .third {
-      background: #006400;
-      color: white;
-      transition: 0.46s;
-  }
 
-  
-.links__bottom li a{
+.links__top li .third {
+    background: #006400;
+    color: white;
+    transition: 0.46s;
+}
+
+
+.links__bottom li a {
     color: rgba(0, 0, 0, 0.50);
     font-family: Inter;
     font-size: 20px;
@@ -89,12 +89,12 @@ li{
 
 
 
-.links__bottom li a{
+.links__bottom li a {
     padding: 15px;
 }
 
 
-nav{
+nav {
     display: flex;
 }
 
@@ -102,18 +102,18 @@ nav li {
     list-style: none;
 }
 
-nav li a{
+nav li a {
     text-decoration: none;
     color: black;
     font-size: 20px;
 }
 
-#Password{
+#Password {
     border-bottom: 1px solid #006400;
     transition: 1s;
 }
 
-.password__container{
+.password__container {
     margin: 10px 100px;
     display: flex;
     padding: 40px 30px;
@@ -123,19 +123,19 @@ nav li a{
     height: 865px;
 }
 
-.others{
+.others {
     display: flex;
     padding: 0 0 0 20px;
     margin-top: 20px;
-  
+
 }
 
-.others h4{
+.others h4 {
     display: flex;
     align-items: center;
 }
 
-#first{
+#first {
     padding: 10px 20px;
     border-radius: 4px;
     border: 1px solid #D9D9D9;
@@ -143,7 +143,7 @@ nav li a{
     margin: 0 30px;
 }
 
-#second{
+#second {
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #D9D9D9;
@@ -151,11 +151,11 @@ nav li a{
     background: #FFC107;
 }
 
-.btns{
+.btns {
     margin-left: 250px;
 }
 
-.change__password{
+.change__password {
     display: flex;
     width: 500px;
     height: 42px;
@@ -165,13 +165,13 @@ nav li a{
     margin-top: 20px;
 }
 
-.change__password input{
+.change__password input {
     padding: 10px;
     border-radius: 4px;
     border: 0.5px solid rgba(0, 0, 0, 0.50);
 }
 
-.others h4{
+.others h4 {
     color: #000;
     font-family: Inter;
     font-size: 18px;
@@ -182,7 +182,7 @@ nav li a{
     gap: 10px;
 }
 
-.change__password h4{
+.change__password h4 {
     color: #000;
     font-family: Inter;
     font-size: 18px;
@@ -193,7 +193,7 @@ nav li a{
     gap: 10px;
 }
 
-.change__pin{
+.change__pin {
     display: flex;
     width: 500px;
     height: 42px;
@@ -205,12 +205,12 @@ nav li a{
     margin-top: 60px;
 }
 
-.change__pin input{
+.change__pin input {
     border-radius: 4px;
     border: 0.5px solid rgba(0, 0, 0, 0.50);
 }
 
-.change__pin h4{
+.change__pin h4 {
     color: #000;
     font-family: Inter;
     font-size: 18px;
@@ -219,22 +219,26 @@ nav li a{
     line-height: normal;
 }
 
-.icons{
+.icons {
     display: flex;
     gap: 10px;
 }
 
-.icons h4{
-  display: flex;
-  align-items: center;
+.icons h4 {
+    display: flex;
+    align-items: center;
 }
 
-.inner__Container{
+.inner__Container {
     border-radius: 20px;
     border: 1px solid #D9D9D9;
     background: #fff;
     height: 1024px;
     margin-top: 40px;
-    width: 925px;
-   padding: 20px;
+    width: 850px;
+    padding: 20px;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

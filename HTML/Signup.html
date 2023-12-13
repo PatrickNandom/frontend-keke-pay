@@ -117,6 +117,7 @@
 
                     if (response.ok) {
                         alert(`${data.message}`);
+                        localStorage.setItem('fullName', data.name);
                         window.location.href = 'Dashboard.html';
                     } else {
                         alert(`${data.message}`);
