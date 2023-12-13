@@ -38,6 +38,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 11;
+    background: #fff;
 }
 
 .nav__container {
@@ -46,6 +47,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
+
 }
 
 .nav__container img {
