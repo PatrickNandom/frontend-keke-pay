@@ -1,15 +1,14 @@
-  
   * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
   }
 
-  .container{
-    display: flex;
+  .container {
+      display: flex;
   }
-  
-  aside{
+
+  aside {
       display: flex;
       flex-direction: column;
       border: 2px solid black;
@@ -21,36 +20,37 @@
       background: #FFF;
       padding: 40px 0px;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  
-  input{
-   padding: 20px;
-   border-radius: 10px;
-   border: 2px solid #D9D9D9;
-   font-size: 14px
+      position: fixed;
   }
 
-  .date{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -650px;
-    
-    gap: 20px;
+  input {
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #D9D9D9;
+      font-size: 14px
   }
 
-  .date h4{
-color: rgba(0, 0, 0, 0.50);
-font-family: Inter;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+  .date {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: -650px;
+
+      gap: 20px;
   }
-  
-  
-  .first__bar{
+
+  .date h4 {
+      color: rgba(0, 0, 0, 0.50);
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+  }
+
+
+  .first__bar {
       display: flex;
       padding: 10px 30px;
       align-items: center;
@@ -67,51 +67,51 @@ line-height: normal;
       width: fit-content;
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
-  
-  #profile{
+
+  #profile {
       height: 30px;
   }
 
-  .logo{
+  .logo {
       display: flex;
       width: 181px;
       height: 41px;
       margin: 0 40px;
       margin-top: -1.5rem;
   }
-  
-  li{
+
+  li {
       list-style: none;
       padding: 0 35px;
   }
-  
-  .links__top li a{
+
+  .links__top li a {
       display: block;
       text-decoration: none;
-      padding:13px 10px;
+      padding: 13px 10px;
       margin-top: 25px;
       border-radius: 15px;
       color: rgba(0, 0, 0, 0.50);
   }
-  
-  .links__top li i{
+
+  .links__top li i {
       padding-right: 10px;
   }
 
   .links__top li a:hover {
-    background: #006400;
-    color: white;
-    transition: 0.46s;
-}
-  
+      background: #006400;
+      color: white;
+      transition: 0.46s;
+  }
+
   .links__top li .third {
       background: #006400;
       color: white;
       transition: 0.46s;
   }
 
-  
-  .links__bottom li a{
+
+  .links__bottom li a {
       color: rgba(0, 0, 0, 0.50);
       font-family: Inter;
       font-size: 20px;
@@ -121,80 +121,80 @@ line-height: normal;
       display: flex;
       display: row;
   }
-  
-  
+
+
   .links__bottom {
       margin-top: 150px;
   }
-  
-  .links__bottom li a{
+
+  .links__bottom li a {
       padding: 15px;
   }
-  .transaction__area{
-    border: 1px solid #D9D9D9;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin-left: 80px;
-    border-radius: 10px;
-    width: 740px;
-    height: fit-content;
-    margin-top: 150px;
-}
 
-.top__transaction__area{
-display: flex;
-}
+  .transaction__area {
+      border: 1px solid #D9D9D9;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      margin-left: 80px;
+      border-radius: 10px;
+      width: 740px;
+      height: fit-content;
+      margin-top: 150px;
+  }
 
-hr{
-margin: 5px 12px;
-}
+  .top__transaction__area {
+      display: flex;
+  }
 
-.transaction__area p{
-text-align: center;
-padding: 50px 20px;
-}
+  hr {
+      margin: 5px 12px;
+  }
 
-.top__transaction__area li{
-margin-top: 20px;
-}
+  .transaction__area p {
+      text-align: center;
+      padding: 50px 20px;
+  }
 
-
-.top__transaction__area li a{
-padding-left: 340px;
-text-decoration: none;
-color: #006400;
-}
-
-.list{
-    display: grid;
-    grid-template-columns: 5.5fr 10fr 5fr 10fr 5fr ;
-    gap: 40px;
-    margin: 0 50px;
-}
-
-.first__row{
-   display: flex;
-   gap: 1px;
-    margin-top: 10px;
-}
-
-#amount{
-    margin-left: 10px;
-}
-
-#Status{
-    margin-left: 30px;
-
-}
-.first__row img{
-    margin-right: 8px;
-    position: relative;
-    top: 2px;
-}
-.history{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+  .top__transaction__area li {
+      margin-top: 20px;
+  }
 
 
+  .top__transaction__area li a {
+      padding-left: 340px;
+      text-decoration: none;
+      color: #006400;
+  }
 
+  .list {
+      display: grid;
+      grid-template-columns: 5.5fr 10fr 5fr 10fr 5fr;
+      gap: 40px;
+      margin: 0 50px;
+  }
+
+  .first__row {
+      display: flex;
+      gap: 1px;
+      margin-top: 10px;
+  }
+
+  #amount {
+      margin-left: 10px;
+  }
+
+  #Status {
+      margin-left: 30px;
+
+  }
+
+  .first__row img {
+      margin-right: 8px;
+      position: relative;
+      top: 2px;
+  }
+
+  .history {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
