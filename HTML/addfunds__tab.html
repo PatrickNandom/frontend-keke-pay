@@ -74,14 +74,9 @@
                 const cvv = document.querySelector('.bank-cvv').value;
                 const pin = document.querySelector('.bank-pin').value;
 
-                // console.log(amount);
-                // console.log(cardNumber);
-                // console.log(mm);
-                // console.log(yy);
-                // console.log(cvv);
-                // console.log(pin);
-
-
+                if (!amount || !cardNumber || !mm || !yy || !cvv || !pin) {
+                    return alert('Missing required fields ')
+                }
 
                 try {
 
