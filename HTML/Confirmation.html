@@ -72,6 +72,9 @@
         if (res.ok) {
           alert(`${data.message}`);
           localStorage.setItem('userId', data.userId);
+          localStorage.setItem('fullName', data.name);
+          localStorage.setItem('balance', data.balance);
+          localStorage.setItem('count', data.count);
           location.assign('Signup.html');
 
         } else {
