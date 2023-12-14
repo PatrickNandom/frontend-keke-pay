@@ -213,6 +213,8 @@
 
             const transaction = await response.json();
 
+            console.log(transaction);
+
             const transactionHistoryElement = document.getElementById('transactionHistory');
             const formattedDate = new Date(transaction.date).toLocaleDateString();
             const transactionRow = document.createElement('div');
