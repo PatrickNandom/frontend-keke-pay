@@ -160,7 +160,10 @@
         //END IF THE FUNCTION FOR DISPLAYING DATE//
 
         //DIS PLAY NAME FUNCTION//
-        const fullName = localStorage.getItem('fullName');
+        let fullName = localStorage.getItem('fullName');
+        let nameParts = fullName.split(" ");
+        let firstName = nameParts[0];
+
         const balance = localStorage.getItem('balance');
         const count = localStorage.getItem('count')
 
@@ -170,7 +173,7 @@
         // console.log(name);
         // console.log(balance);
         // console.log(counts);
-        name.textContent = `Welcome ${fullName}`;
+        name.textContent = `Welcome :${firstName}`;
         bal.textContent = balance;
         counts.textContent = count;
         //END OF DISPLAY NAME FUCTION//
