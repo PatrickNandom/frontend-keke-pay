@@ -131,7 +131,11 @@
                     const data = await response.json();
 
                     if (response.ok) {
-                        alert('Profile updated successfully.');
+                        // alert('Profile updated successfully.');
+                        alert(`${data.message}`);
+                        localStorage.setItem('fullName', data.name);
+                        window.location.href = 'Dashboard.html';
+
                     } else {
                         alert(`Failed to update profile. Error: ${data.message}`);
                     }
