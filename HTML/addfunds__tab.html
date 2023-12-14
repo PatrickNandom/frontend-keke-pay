@@ -102,11 +102,10 @@
                         localStorage.setItem('balance', data.balance);
                         localStorage.setItem('count', data.count)
                         window.location.href = 'Dashboard.html';
+                    } else {
+                        // alert(`${data.message}`);
+                        alert('somthing went wrong, input correct card details')
                     }
-                    // else {
-                    //     // alert(`${data.message}`);
-                    //     alert('somthing went wrong')
-                    // }
 
 
                 } catch (error) {

@@ -136,12 +136,15 @@
                         localStorage.setItem('fullName', data.name);
                         window.location.href = 'Dashboard.html';
 
-                    } else {
-                        alert(`Failed to update profile. Error: ${data.message}`);
                     }
+                    // else {
+                    //     alert(`Failed to update profile. Error: ${data.message}`);
+                    // }
 
                 } catch (error) {
                     console.error('Error updating user profile:', error);
+                    alert(`Failed to update profile. Error: ${data.message}`);
+
                 }
             };
 
