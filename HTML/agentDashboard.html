@@ -108,6 +108,58 @@
     </div>
     </div>
     </main>
+
+    <script>
+
+        //AGENT API CONSUMPTION//
+
+
+        //AGENT API CONSUMPTION//
+
+
+        // Function to update date and time
+        function updateDateTime() {
+            const dateElement = document.getElementById('day');
+            const monthElement = document.getElementById('month');
+            const yearElement = document.getElementById('year');
+            const hoursElement = document.getElementById('hrs');
+            const minutesElement = document.getElementById('min');
+            const secondsElement = document.getElementById('sec');
+
+            const now = new Date();
+
+            // Format day with ordinal suffix (1st, 2nd, 3rd, etc.)
+            const day = now.getDate();
+            const ordinalSuffix = (day) => {
+                if (day >= 11 && day <= 13) {
+                    return `${day}th`;
+                }
+                switch (day % 10) {
+                    case 1: return `${day}st`;
+                    case 2: return `${day}nd`;
+                    case 3: return `${day}rd`;
+                    default: return `${day}th`;
+                }
+            };
+
+            dateElement.textContent = ordinalSuffix(day);
+            monthElement.textContent = now.toLocaleString('default', { month: 'short' }) + '-';
+            yearElement.textContent = now.getFullYear();
+
+            // Format time with leading zeros
+            const formatWithLeadingZero = (num) => (num < 10 ? `0${num}` : num);
+
+            hoursElement.textContent = formatWithLeadingZero(now.getHours());
+            minutesElement.textContent = formatWithLeadingZero(now.getMinutes());
+            secondsElement.textContent = formatWithLeadingZero(now.getSeconds());
+        }
+
+        // Update date and time every second
+        setInterval(updateDateTime, 1000);
+
+        // Initial call to set the date and time on page load
+        updateDateTime();
+    </script>
 </body>
 
 </html>

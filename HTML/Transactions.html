@@ -183,6 +183,7 @@
                 try {
                     const response = await fetch(`${baseUrl}/payments/${userId}`);
                     const data = await response.json();
+                    // const { date, keke, amount, reciept } = data
 
                     if (response.ok) {
                         data.forEach(transaction => {
