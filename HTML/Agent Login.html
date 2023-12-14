@@ -77,12 +77,14 @@
                 if (!response.ok) {
                     alert(`${data.message}`);
 
+
                 }
 
                 if (response.ok) {
 
                     alert(`${data.message}`);
 
+                    localStorage.setItem('agentId', data.agentId);
                     window.location.href = 'agentDashboard.html';
                 }
 

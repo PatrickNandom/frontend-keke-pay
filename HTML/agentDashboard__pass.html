@@ -29,7 +29,7 @@
 
                 <div class="links__bottom">
                     <li><a href="">Support</a></li>
-                    <li><a href="">Log out <i class="uil uil-signout"></i></a></li>
+                    <li><a href="Agent Login.html">Log out <i class="uil uil-signout"></i></a></li>
                 </div>
             </div>
         </aside>
@@ -60,13 +60,13 @@
 
                 <div class="change__password">
                     <h4>Current Password</h4>
-                    <input type="password">
+                    <input type="password" id="currentPassword">
 
                     <h4>New Password</h4>
-                    <input type="password">
+                    <input type="password" id="newPassword">
 
                     <h4>Confirm Password</h4>
-                    <input type="password">
+                    <input type="password" id="confirmPassword">
 
                     <!-- 
             <div class="change__pin">
@@ -94,6 +94,62 @@
         </div>
     </div>
     </div>
+
+
+    <script>
+        // Function to change user password
+        const btn = document.getElementById('second')
+        btn.addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            const baseUrl = 'http://localhost:5500';
+            // const baseUrl = 'https://keke-pay.onrender.com'
+            const agentId = localStorage.getItem('agentId');
+            console.log(agentId);
+            // console.log(userId);
+
+            const changePassword = async () => {
+                const currentPassword = document.getElementById('currentPassword').value;
+                const newPassword = document.getElementById('newPassword').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                console.log(currentPassword);
+                console.log(newPassword);
+                console.log(confirmPassword);
+                try {
+                    const response = await fetch(`${baseUrl}/change-password/${agentId}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            currentPassword,
+                            newPassword,
+                            confirmPassword,
+                        }),
+                    });
+
+                    const data = await response.json();
+                    if (response.ok) {
+                        alert(`${data.message}`);
+                    } else {
+                        // alert(`Failed to update profile. Error: ${data.message}`);
+                        alert(`${data.message}`);
+
+                    }
+
+                    // Handle the response as needed 
+                    console.log(data);
+                } catch (error) {
+                    console.error('Error changing password:', error);
+                    alert(`${data.message}`);
+                }
+            };
+
+            changePassword();
+
+        });
+
+    </script>
 </body>
 
 </html>
