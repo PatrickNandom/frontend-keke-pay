@@ -123,10 +123,13 @@
                         localStorage.setItem('balance', data.balance);
                         localStorage.setItem('count', data.count)
                         window.location.href = 'Dashboard.html';
+                    } else if (!response.ok) {
+                        alert(`${data.message}`);
                     }
 
                 } catch (error) {
                     console.error(error);
+                    alert(`${data.message}`);
 
                 }
 
