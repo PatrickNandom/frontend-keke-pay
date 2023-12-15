@@ -129,9 +129,7 @@
 
 
 
-    // Search transactions function (you can implement this based on your requirements)
-    // function searchTransactions() {
-    // }
+
 
     //END OF API CONSUMPTION PART//
 
@@ -144,6 +142,10 @@
     search.addEventListener('click', async (e) => {
       e.preventDefault();
 
+      setTimeout(() => {
+        window.location.reload();
+      }, 0);
+
 
       try {
 
@@ -153,41 +155,6 @@
         if (!reciptNo) {
           alert('please input receipt number')
         }
-
-        // async function fetchReceiptRecord() {
-        //   const baseUrl = 'http://localhost:5500';
-
-        //   const response = await fetch(`${baseUrl}/fetch-record`, {
-        //     method: 'POST',
-        //     headers: {
-        //       'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify({
-        //       receiptNumber: reciptNo
-
-        //     }),
-        //   });
-        //   const transactions = await response.json();
-
-        //   if (response.ok) {
-        //     const transactionHistoryElement = document.getElementById('transactionHistory');
-        //     transactions.forEach(transaction => {
-        //       const formattedDate = new Date(transaction.date).toLocaleDateString();
-        //       const transactionRow = document.createElement('div');
-        //       transactionRow.classList.add('first__row');
-        //       transactionRow.innerHTML = `
-        //                     <li>${formattedDate}</li>
-        //                     <li>${transaction.description}</li>
-        //                     <li id="amount">N${transaction.amount}</li>
-        //                     <li>${transaction.receiptNumber}</li>
-        //                     <li id="Status"><img src="../Images/Ellipse 4.svg" alt="">${transaction.status}</li>
-        //                 `;
-        //       transactionHistoryElement.appendChild(transactionRow);
-        //     });
-        //   } else {
-        //     console.error(`Failed to fetch transactions. Error: ${transactions.message}`);
-        //   }
-        // }
 
 
         async function fetchReceiptRecord() {
