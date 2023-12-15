@@ -211,7 +211,10 @@
               return;
             }
 
-            const transaction = await response.json();
+            // const transaction = await response.json();
+
+            const result = await response.json();
+            const transaction = result.payments;
 
             console.log(transaction);
 
