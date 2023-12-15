@@ -65,7 +65,7 @@
                     <div class="first__Card">
                         <div class="cont">
                             <p>Total tickets verified today</p>
-                            <h2>0</h2>
+                            <h2 id="ticketsCount">0</h2>
                         </div>
                     </div>
                     <div class="second__Card">
@@ -159,6 +159,10 @@
 
         // Initial call to set the date and time on page load
         updateDateTime();
+
+        let count = localStorage.getItem('count');
+        const ct = document.getElementById('ticketsCount');
+        ct.textContent = count;
     </script>
 </body>
 

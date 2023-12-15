@@ -177,6 +177,7 @@
 
             const result = await response.json();
             const transaction = result.payments;
+            localStorage.setItem('count', transaction.count)
 
             console.log(transaction);
 
